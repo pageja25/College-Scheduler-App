@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -8,6 +8,7 @@
     android:layout_weight="1"
     android:background="@color/screenBackground2"
     tools:context=".AddActivity"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
@@ -75,40 +76,14 @@
         app:layout_constraintStart_toEndOf="@id/textview_location"
         app:layout_constraintTop_toBottomOf="@+id/instructor_name" />
 
-    <TextView
-        android:id="@+id/textview_time"
+    <Button
+        android:id="@+id/timePickerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time: "
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/location"/>
+        android:onClick="popTimePicker"
+        android:text="Select Time"
+        />
 
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintTop_toBottomOf="@id/location"
-        app:layout_constraintStart_toEndOf="@id/textview_time"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/location"
-        app:layout_constraintStart_toEndOf="@id/editTextTime">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AM"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PM"/>
-    </RadioGroup>
     <TextView
         android:id="@+id/textview_repeats"
         android:layout_width="wrap_content"
@@ -129,36 +104,43 @@
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="horizontal">
         <CheckBox
+            android:id="@+id/sunday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sunday"/>
         <CheckBox
+            android:id="@+id/monday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/monday"/>
         <CheckBox
+            android:id="@+id/tuesday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tuesday"/>
         <CheckBox
+            android:id="@+id/wednesday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wednesday"/>
         <CheckBox
+            android:id="@+id/thursday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/thursday"/>
         <CheckBox
+            android:id="@+id/friday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/friday"/>
         <CheckBox
+            android:id="@+id/saturday_checked"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -191,9 +173,11 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_gravity="center"
+        android:text="Add Class"
+        android:onClick="saveClassAction"
         app:layout_constraintTop_toBottomOf="@id/descript"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
