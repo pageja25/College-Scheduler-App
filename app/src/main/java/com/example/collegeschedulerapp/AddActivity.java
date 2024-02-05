@@ -1,25 +1,14 @@
 package com.example.collegeschedulerapp;
+
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import com.example.collegeschedulerapp.databinding.ActivityAddBinding;
-
-public class AddActivity extends Fragment {
-
-    private ActivityAddBinding binding;
-
+public class AddActivity extends AppCompatActivity {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityAddBinding.inflate(getLayoutInflater());
-
-        return binding.getRoot();
+        setContentView(R.layout.activity_add);
     }
-
 }

@@ -1,7 +1,15 @@
 plugins {
     id("com.android.application")
 }
-
+configurations.all {
+    resolutionStrategy {
+        eachDependency {
+            if ((requested.group == "org.jetbrains.kotlin") && (requested.name.startsWith("kotlin-stdlib"))) {
+                useVersion("1.8.0")
+            }
+        }
+    }
+}
 android {
     namespace = "com.example.collegeschedulerapp"
     compileSdk = 34
@@ -30,6 +38,10 @@ android {
         viewBinding = true
     }
     buildToolsVersion = "34.0.0"
+
+    packaging {
+        resources.excludes.add("META-INF/*")
+    }
 }
 
 dependencies {

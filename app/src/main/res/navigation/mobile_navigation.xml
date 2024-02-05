@@ -5,9 +5,9 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
-    <fragment
+    <activity
         android:id="@+id/nav_home"
-        android:name="com.example.collegeschedulerapp.ui.home.HomeFragment"
+        android:name="com.example.collegeschedulerapp.ui.home.HomeActivity"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 

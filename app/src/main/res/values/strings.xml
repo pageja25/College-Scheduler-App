@@ -17,4 +17,6 @@
     <string name="thursday">THU</string>
     <string name="friday">FRI</string>
     <string name="saturday">SAT</string>
+    <string name="previousArrow"><![CDATA[<-]]></string>
+    <string name="nextArrow"><![CDATA[->]]></string>
 </resources>

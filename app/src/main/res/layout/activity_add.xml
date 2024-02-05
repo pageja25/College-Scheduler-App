@@ -57,6 +57,23 @@
         android:inputType="text"
         app:layout_constraintStart_toEndOf="@id/textview_instructor"
         app:layout_constraintTop_toBottomOf="@+id/class_title" />
+    <TextView
+        android:id="@+id/textview_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructor_name" />
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@id/textview_location"
+        app:layout_constraintTop_toBottomOf="@+id/instructor_name" />
 
     <TextView
         android:id="@+id/textview_time"
@@ -66,7 +83,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/instructor_name"/>
+        app:layout_constraintTop_toBottomOf="@id/location"/>
 
     <EditText
         android:id="@+id/editTextTime"
@@ -74,14 +91,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="time"
-        app:layout_constraintTop_toBottomOf="@id/instructor_name"
+        app:layout_constraintTop_toBottomOf="@id/location"
         app:layout_constraintStart_toEndOf="@id/textview_time"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/instructor_name"
+        app:layout_constraintTop_toBottomOf="@id/location"
         app:layout_constraintStart_toEndOf="@id/editTextTime">
         <RadioButton
             android:layout_width="wrap_content"
