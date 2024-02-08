@@ -16,5 +16,8 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/app_to_do"
+            android:title="Todo List" />
     </group>
 </menu>
