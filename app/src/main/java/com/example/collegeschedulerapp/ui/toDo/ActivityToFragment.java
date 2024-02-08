@@ -19,12 +19,10 @@ public class ActivityToFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        ToDoViewModel toDoViewModel = new ToDoViewModel(this);
+        View view = inflater.inflate(R.layout.activity_to, container, false);
+        return view;
 
-        ToDoViewModel toDoViewModel = new ViewModelProvider(this).get(ToDoViewModel.class);
-        toDoViewModel.getText().observe(getViewLifecycleOwner(), text -> binding.textHome.setText(text));
-
-        return binding.getRoot();
     }
 
     @Override
