@@ -22,4 +22,9 @@
         android:name="com.example.collegeschedulerapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_exam_list"
+        android:name="com.example.collegeschedulerapp.ExamListFragment"
+        android:label="Exams"
+        tools:layout="@layout/fragment_exams" />
 </navigation>
