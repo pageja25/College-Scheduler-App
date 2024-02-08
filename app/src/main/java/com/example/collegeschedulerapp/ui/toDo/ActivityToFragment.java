@@ -8,33 +8,28 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.collegeschedulerapp.R;
 import com.example.collegeschedulerapp.databinding.FragmentHomeBinding;
 
 public class ActivityToFragment extends Fragment {
+
     private FragmentHomeBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        ToDoViewModel toDoViewModel = new ToDoViewModel(this);
-        View view = inflater.inflate(R.layout.activity_to, container, false);
-
-
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        toDoViewModel.getText().observe(getViewLifecycleOwner(),
-                textView::setText);
-        return root;
+        ToDoViewModel toDoViewModel = new ViewModelProvider(this).get(ToDoViewModel.class);
+        toDoViewModel.getText().observe(getViewLifecycleOwner(), text -> binding.textHome.setText(text));
+
+        return binding.getRoot();
     }
-
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
-
 }

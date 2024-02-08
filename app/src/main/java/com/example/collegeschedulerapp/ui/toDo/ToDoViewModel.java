@@ -6,12 +6,10 @@ import androidx.lifecycle.ViewModel;
 
 public class ToDoViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
-
-    public ToDoViewModel(ActivityToFragment activityToFragment) {
+    public ToDoViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("Assignments to-do list");
     }
-
     public LiveData<String> getText() {
         return mText;
     }

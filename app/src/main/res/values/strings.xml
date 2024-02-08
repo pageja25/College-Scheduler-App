@@ -11,4 +11,6 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="assignments_to_do">To do List</string>
+    <string name="edit_task">Edit task</string>
+    <string name="delete_task">Delete task</string>
 </resources>
