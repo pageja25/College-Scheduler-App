@@ -22,10 +22,4 @@
         android:name="com.example.collegeschedulerapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/app_to_do"
-        android:name="com.example.collegeschedulerapp.ui.toDo.ActivityToFragment"
-        android:label="@string/assignments_to_do"
-        tools:layout="@layout/activity_to" />
 </navigation>
