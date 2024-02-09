@@ -6,21 +6,20 @@
     android:padding="8dp"
     android:layout_marginBottom="16dp"
     android:background="@color/background_red">
-
     <TextView
-        android:id="@+id/classNameTextView"
+        android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"/>
-
     <TextView
-        android:id="@+id/timeTextView"
+        android:id="@+id/classNameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:textStyle="italic"/>
     <TextView
-        android:id="@+id/dayTextView"
+        android:id="@+id/dueDateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"/>
@@ -30,11 +29,11 @@
         android:orientation="horizontal" >
 
         <ImageButton
-            android:id="@+id/deleteButton"
+            android:id="@+id/completeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_delete"
-            android:contentDescription="deletes" />
+            android:src="@android:drawable/ic_menu_send"
+            android:contentDescription="complete tasks" />
 
         <ImageButton
             android:id="@+id/editButton"

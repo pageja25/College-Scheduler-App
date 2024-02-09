@@ -178,7 +178,7 @@ public class ClassViewActivity extends AppCompatActivity {
                 classToEdit.setTime(LocalTime.of(newHour, newMinute));
 
                 // Notify the adapter of the change
-                classAdapter.notifyItemChanged(position);
+                sortClassModelList();
             }
         });
 

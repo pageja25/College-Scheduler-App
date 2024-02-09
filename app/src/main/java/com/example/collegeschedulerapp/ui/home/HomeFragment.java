@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.collegeschedulerapp.ClassViewActivity;
 import com.example.collegeschedulerapp.R;
 import com.example.collegeschedulerapp.databinding.FragmentHomeBinding;
+import com.example.collegeschedulerapp.ui.assignments.AssignmentActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -32,6 +33,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ClassViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button assignmentViewButton = root.findViewById(R.id.openAssignmentViewButton);
+        assignmentViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AssignmentActivity.class);
                 startActivity(intent);
             }
         });
